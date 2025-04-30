@@ -23,7 +23,7 @@ function logout() {
     localStorage.removeItem("username");  // Example: remove username from localStorage
 
     // Optionally, redirect to the login page
-    window.location.href = "login.html";  // Redirect to login page after logout
+    window.location.href = "index.html";  // Redirect to login page after logout
     
     // SweetAlert popup for logout confirmation
     Swal.fire({
