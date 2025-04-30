@@ -1,210 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Google Fonts (Optional for style) -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Dhiraj Patil</title>
+  <link rel="stylesheet" href="Login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('about')">About</a></li>
-            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-            <li><a href="#" onclick="showSection('clients')">Our Clients</a></li>
-            <li><a href="#" onclick="showSection('career')">Career</a></li>
-            <li><a href="#" onclick="showSection('technologies')">technologies</a></li>
-
-        </ul>
-
-        <ul class="logout">
-            <li><a href="#" onclick="logout()">Logout</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>Dhiraj Patil</h1>
-        <img src="1662880862540.jpg" alt="My Photo" class="profile-pic">
-        <p>Web Developer | Designer | Learner</p>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="profile-info">
-            <h2 class="welcome-title">Welcome to My Dashboard</h2>
-        </div>
-        <div class="services">
-            <h3>Our Services</h3>
-            <div class="service-cards">
-                <div class="service-card">
-                    <h4>Mobile Application Development</h4>
-                    <p>We build modern and responsive mobile applications for iOS and Android.</p>
-                </div>
-                <div class="service-card">
-                    <h4>Web Applications</h4>
-                    <p>Creating dynamic web applications with user-friendly designs and robust functionality.</p>
-                </div>
-                <div class="service-card">
-                    <h4>Website Development</h4>
-                    <p>Designing and developing responsive, interactive, and optimized websites.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer who loves building websites and learning new technologies.</p>
-    </section>
-
-  <!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <div class="contact-container">
-        <!-- Left Contact Info -->
-        <div class="contact-info">
-            <div class="contact-box">
-                <i class="fas fa-envelope"></i>
-                <h4>Email</h4>
-                <p><a href="mailto:dhiraj.patil@example.com">patildhiraj@gmail.com</a></p>
-            </div>
-            <div class="contact-box">
-                <i class="fas fa-phone-alt"></i>
-                <h4>Phone</h4>
-                <p><a href="tel:+1234567890">7338065815</a></p>
-            </div>
-        </div>
-
-        <!-- Right Contact Form -->
-        <div class="contact-form">
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="mobile" placeholder="Mobile Number" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-   <!-- Technologies Section -->
-   <section id="technologies" class="technologies-section">
-    <h2>Technologies We Work With</h2>
-    <div class="technology-cards">
+    <div class="login-container">
+        <!-- Add your logo here -->
+        <img src="images/logo.png" alt="Logo" style="width: 100px; margin-bottom: 10px;"> 
         
-        <div class="technology-card">
-            <h3>HTML5</h3>
-            <img src="images/Htmllogo.png" alt="HTML5 Logo" class="tech-logo">
-            <p><strong>Developed By:</strong> W3C</p>
-            <p><strong>Latest Version:</strong> HTML5.3</p>
-            <p><strong>Advantages:</strong> 
-                <ul>
-                    <li>Better support for multimedia (audio, video).</li>
-                    <li>Cleaner and more semantic code.</li>
-                    <li>Cross-platform compatibility.</li>
-                </ul>
-            </p>
-            <p><strong>Disadvantages:</strong> 
-                <ul>
-                    <li>Still evolving, browser compatibility issues sometimes.</li>
-                    <li>Requires modern browsers for full support.</li>
-                </ul>
-            </p>
-        </div>
-
-        <div class="technology-card">
-            <h3>CSS3</h3>
-            <img src="images/Csslogo.jpeg" alt="HTML5 Logo" class="tech-logo">
-            <p><strong>Developed By:</strong> W3C</p>
-            <p><strong>Latest Version:</strong> CSS3</p>
-            <p><strong>Advantages:</strong> 
-                <ul>
-                    <li>Better design flexibility with animations and transitions.</li>
-                    <li>Improves website speed by separating content from style.</li>
-                </ul>
-            </p>
-            <p><strong>Disadvantages:</strong> 
-                <ul>
-                    <li>Browser compatibility issues.</li>
-                    <li>Complex animations can be difficult to manage.</li>
-                </ul>
-            </p>
-        </div>
-
-        <div class="technology-card">
-            <h3>JavaScript</h3>
-            <img src="images/Javascriptlogo.png" alt="HTML5 Logo" class="tech-logo">
-            <p><strong>Developed By:</strong> Netscape (Brendan Eich)</p>
-            <p><strong>Latest Version:</strong> ECMAScript 2024</p>
-            <p><strong>Advantages:</strong> 
-                <ul>
-                    <li>Client-side execution for fast results.</li>
-                    <li>Supports dynamic and interactive websites.</li>
-                    <li>Wide community support.</li>
-                </ul>
-            </p>
-            <p><strong>Disadvantages:</strong> 
-                <ul>
-                    <li>Can be misused for malicious purposes (XSS attacks).</li>
-                    <li>Depends on browser support.</li>
-                </ul>
-            </p>
-        </div>
-
-       
-
+        <h2>Sign In</h2>
+        <form id="login-form" action="index1.html" method="post" onsubmit="return validateLogin(event)">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    
+        <p class="signup-text">New User? <a href="signup.html">Sign Up</a></p>
+    
+        <p id="error-message" style="color:red; display:none;">Invalid username or password.</p>
     </div>
-</section>
 
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients-section">
-        <h2>Our Clients</h2>
-        <div class="client-marquee">
-            <div class="client-track">
-                <img src="images/clients/Microsoft.jpg" alt="Microsoft" class="client-logo">
-                <img src="images/clients/OpenAi.jpg" alt="OpenAI" class="client-logo">
-                <img src="images/clients/Google.png" alt="Google" class="client-logo">
-                <img src="images/clients/TCS.jpg" alt="TCS" class="client-logo">
-                <img src="images/clients/Deloit.jpg" alt="Deloit" class="client-logo">
-    
-                <!-- Repeat for smooth looping -->
-                <img src="images/clients/Microsoft.jpg" alt="Microsoft" class="client-logo">
-                <img src="images/clients/OpenAi.jpg" alt="OpenAI" class="client-logo">
-                <img src="images/clients/Google.png" alt="Google" class="client-logo">
-                <img src="images/clients/TCS.jpg" alt="TCS" class="client-logo">
-                <img src="images/clients/Deloit.jpg" alt="Deloit" class="client-logo">
-            </div>
-        </div>
-    </section>
-    
-    
-
-
-
-
-    <!-- Career Section -->
-    <section id="career" class="career">
-        <h2>Career Opportunities</h2>
-        <p>We are always looking for talented and passionate individuals to join our team.</p>
-    </section>
-
-    <footer>
-        <p>© 2025 Dhiraj Patil All Right Reserved</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="Login.js"></script> <!-- Link to external JavaScript file -->
 </body>
+
 </html>

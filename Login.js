@@ -21,7 +21,7 @@ function validateLogin(event) {
             confirmButtonText: 'Proceed',
         }).then(() => {
             // Redirect to homepage after success
-            window.location.href = "index.html";
+            window.location.href = "index1.html";
         });
     } else {
         // If login fails, show SweetAlert error message

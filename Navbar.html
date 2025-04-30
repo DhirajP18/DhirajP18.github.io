@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #444;
+      border-radius: 5px;
+      width: 200px;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .nav-links li {
+      list-style: none;
+      padding: 10px 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    @media (min-width: 768px) {
+      .hamburger {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        padding: 0;
+      }
+
+      .nav-links li {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleNav()">⋮</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      <li><a href="#" onclick="showSection('clients')">Our Clients</a></li>
+      <li><a href="#" onclick="showSection('career')">Career</a></li>
+      <li><a href="#" onclick="showSection('technologies')">Technologies</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleNav() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // Dummy handlers
+    function showSection(name) {
+      alert("Navigating to section: " + name);
+    }
+
+    function logout() {
+      alert("Logging out...");
+    }
+  </script>
+
+</body>
+</html>
